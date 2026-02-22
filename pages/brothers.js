@@ -11,6 +11,15 @@ const baksoSapi = localFont({ src: "./BaksoSapi.otf" });
 
 const brothers = [
   {
+    name: "Ishaan Vohra",
+    delta: "1321",
+    class: "2028",
+    course: "6-4",
+    interests: "edm, badminton, skiing, wang wang crackers",
+    blurb: "what up chat",
+    position: "Webmaster, Scholarship Chair",
+  },
+  {
     name: "Andy Fong",
     delta: "1256",
     class: "2025",
@@ -24,6 +33,7 @@ const brothers = [
     course: "6-3",
     interests: "Soccer, biking, movies and reading",
     blurb: "My mental health depends on 11 players",
+    position: "Summer Treasurer, Social Chair",
   },
   {
     name: "Powell Zhang",
@@ -32,7 +42,6 @@ const brothers = [
     course: "6-3 + 15-1",
     interests: "Violin, Piano, Total War, Osu, Organizing things",
     blurb: "I like pigs. Cats look down on us, dogs look up at us. Pigs, pigs treat us as equal... and I like bacon",
-    position: "President",
   },
   {
     name: "Zhi Zheng Ong",
@@ -41,7 +50,7 @@ const brothers = [
     course: "8, 6-4",
     interests: "stargazing, piano/guitar, doomscrolling/youtube",
     blurb: "i put the zz in rizz",
-    position: "Social Media / Lord of Kerns",
+    position: "Rush Chair, Lord of Kerns",
   },
   {
     name: "Darren Yao",
@@ -58,7 +67,7 @@ const brothers = [
     course: "18",
     interests: "Reading, bouldering, chess, puzzle games",
     blurb: "WUBALUBADUBDUB",
-    position: "Vice President, Rush Chair",
+    position: "Vice President",
   },
   
   {
@@ -75,7 +84,6 @@ const brothers = [
     course: "18",
     interests: "Learning cool maths, swimming, cooking",
     blurb: "Rush Theta Xi!",
-    position: "Memed, summer housing chair",
   },
   {
     name: "Michael Huang",
@@ -84,7 +92,7 @@ const brothers = [
     course: "8",
     interests: "Reading and writing fictions, playing video or board games, and watching shows",
     blurb: "Hey!👋",
-    position: "Repair Manager, Rush Chair",
+    position: "Repair Manager",
   },
   {
     name: "Thomas Liu",
@@ -94,21 +102,12 @@ const brothers = [
     interests: "Poker, Coding, Skipping Lecture",
   },
   {
-    name: "Curtis Chang",
-    delta: "1260",
-    class: "2025",
-    course: "18, 6-14",
-    interests: "Singing, Cooking/Baking, Piano, Origami, Hanging Out",
-    blurb: "i like to drink too much white wine and overshare",
-  },
-  {
     name: "Kingston Lew",
     delta: "1291",
     class: "2026",
     course: "6-14, 15-2",
     interests: "hip-hop dance, traveling, street fashion",
     blurb: "🌞",
-    position: "Social Chair",
   },
   {
     name: "Marin Hristov Hristov",
@@ -125,7 +124,6 @@ const brothers = [
     course: "6-4",
     interests: "Synthesizers, Badminton, Skiing",
     blurb: "maximizing silliness",
-    position: "social chair",
   },
   {
     name: "Ryan Yang",
@@ -134,7 +132,6 @@ const brothers = [
     course: "Physics",
     interests: "Debate, Cooking, Singing, Forecasting.",
     blurb: "Robert'); DROP TABLE STUDENTS; --",
-    position: "Social Chair",
   },
   {
     name: "Sinjin Cho-Tupua",
@@ -143,13 +140,6 @@ const brothers = [
     course: "6-3, 18",
     interests: "league of legends, playing viola, psets",
     blurb: "this page needs a herooooo",
-  },
-  {
-    name: "Larry Shi",
-    delta: "1279",
-    class: "2025",
-    course: "6-2. 8",
-    interests: "DJ mixing, clarinet, poker",
   },
 {
     name: "Jacob Teo",
@@ -231,20 +221,13 @@ const brothers = [
     blurb: "",
   },
   {
-    name: "Sinjin Cho-Tupua",
-    delta: "1296",
-    class: "2027",
-    course: "6-3, 18",
-    interests: "league of legends, playing viola, psets",
-    blurb: "this page needs a herooooo",
-  },
-{
     name: "Allen Ho",
     delta: "1298",
     class: "2027",
     course: "6-4",
     interests: "Startups, exploiting MIT, sleep",
     blurb: "King Cruft",
+    position: "President",
   },
 ]
   .sort((a, b) => (a.delta > b.delta ? 1 : -1))

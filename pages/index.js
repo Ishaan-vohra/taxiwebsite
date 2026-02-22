@@ -3,7 +3,6 @@ import Typed from "typed.js";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import Banner from "../components/Banner";
 
 import localFont from "next/font/local";
 
@@ -45,11 +44,6 @@ export default function Home() {
   }, []);
   return (
     <div className={`pageContainer ${baksoSapi.className}`}>
-      <Banner>
-        <p style={{ fontSize: "18px", margin: 0 }}>
-          🎉 Fall Rush 2024 is Happening! Check Out Our Rush Schedule!🕺
-        </p>
-      </Banner>
       <div className={styles.videoContainer}>
         <video autoPlay muted loop id="vaydwalking">
           <source src="./house.mp4" type="video/mp4" />
@@ -76,6 +70,17 @@ export default function Home() {
         </motion.div>
         <motion.div
           key={"summer"}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 1.25, duration: 1.5 }}
+          animate={{ opacity: 1 }}
+          className="Home-menuItem"
+        >
+          <Link href="/summer">
+            <span className={styles.Link}>SUMMER HOUSING</span>
+          </Link>
+        </motion.div>
+        <motion.div
+          key={"rush"}
           initial={{ opacity: 0 }}
           transition={{ delay: 1.25, duration: 1.5 }}
           animate={{ opacity: 1 }}

@@ -66,17 +66,17 @@ function House(props) {
         }}
       >
         <h1 style={{ color: "black", textTransform: "none" }}>
-          President: Powell Zhang
+          President: Allen Ho
         </h1>
         <h2 style={h2Style}>txi-president [at] mit.edu</h2>
         <br />
         <h1 style={{ color: "black", textTransform: "none" }}>
-          Secretary: Elliot Liu
+          Secretary: Thomas Liu
         </h1>
         <h2 style={h2Style}>txi-secretary [at] mit.edu</h2>
         <br />
         <h1 style={{ color: "black", textTransform: "none" }}>
-          Social: Franklin Wang | Ryan Yang | Kingston Lew
+          Social: Panagiotis Liampas | Juan Pablo Amezcua Gonzalez
         </h1>
         <h2 style={h2Style}> txi-social [at] mit.edu</h2>
         <br />
