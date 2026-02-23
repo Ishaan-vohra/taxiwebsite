@@ -81,6 +81,11 @@ function House(props) {
         <h2 style={h2Style}> txi-social [at] mit.edu</h2>
         <br />
         <h1 style={{ color: "black", textTransform: "none" }}>
+        Webmaster: Ishaan Vohra
+        </h1>
+        <h2 style={h2Style}> txi-web [at] mit.edu</h2>
+        <br />
+        <h1 style={{ color: "black", textTransform: "none" }}>
           General Officers
         </h1>
         <h2 style={h2Style}>txi-officers [at] mit.edu</h2>
