@@ -44,6 +44,22 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <div
         style={{
+          width: "100%",
+          textAlign: "center",
+          padding: "8px",
+          backgroundColor: "rgba(0,0,0,0.7)",
+          color: "#ccc",
+          fontFamily: "Alata, sans-serif",
+          fontSize: "12px",
+        }}
+      >
+        Webmaster: Ishaan Vohra,{" "}
+        <a href="mailto:txi-web@mit.edu" style={{ color: "#ccc" }}>
+          txi-web@mit.edu
+        </a>
+      </div>
+      <div
+        style={{
           position: "fixed",
           padding: "4px",
           margin: "8px",

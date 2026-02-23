@@ -76,14 +76,9 @@ function House(props) {
         <h2 style={h2Style}>txi-secretary [at] mit.edu</h2>
         <br />
         <h1 style={{ color: "black", textTransform: "none" }}>
-          Social: Panagiotis Liampas | Juan Pablo Amezcua Gonzalez
+          Social: Panagiotis Liampas, Juan Pablo Amezcua Gonzalez
         </h1>
         <h2 style={h2Style}> txi-social [at] mit.edu</h2>
-        <br />
-        <h1 style={{ color: "black", textTransform: "none" }}>
-        Webmaster: Ishaan Vohra
-        </h1>
-        <h2 style={h2Style}> txi-web [at] mit.edu</h2>
         <br />
         <h1 style={{ color: "black", textTransform: "none" }}>
           General Officers
