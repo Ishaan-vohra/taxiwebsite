@@ -110,7 +110,7 @@ const brothers = [
     blurb: "🌞",
   },
   {
-    name: "Marin Hristov Hristov",
+    name: "Marin Hristov",
     delta: "1308",
     class: "2028",
     course: "18, 6-3",
