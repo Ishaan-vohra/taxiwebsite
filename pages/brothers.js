@@ -50,7 +50,7 @@ const brothers = [
     course: "8, 6-4",
     interests: "stargazing, piano/guitar, doomscrolling/youtube",
     blurb: "i put the zz in rizz",
-    position: "Rush Chair, Lord of Kerns",
+    position: "Rush Chair, Lord of Kerns, Publicity Chair",
   },
   {
     name: "Darren Yao",
@@ -84,6 +84,7 @@ const brothers = [
     course: "18",
     interests: "Learning cool maths, swimming, cooking",
     blurb: "Rush Theta Xi!",
+    position: "Risk Manager",
   },
   {
     name: "Michael Huang",
@@ -92,7 +93,6 @@ const brothers = [
     course: "8",
     interests: "Reading and writing fictions, playing video or board games, and watching shows",
     blurb: "Hey!👋",
-    position: "Repair Manager",
   },
   {
     name: "Thomas Liu",
@@ -100,6 +100,7 @@ const brothers = [
     class: "2028",
     course: "6-4, 9",
     interests: "Poker, Coding, Skipping Lecture",
+    position: "Secretary",
   },
   {
     name: "Kingston Lew",
