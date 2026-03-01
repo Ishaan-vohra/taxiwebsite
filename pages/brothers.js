@@ -42,6 +42,7 @@ const brothers = [
     course: "6-3 + 15-1",
     interests: "Violin, Piano, Total War, Osu, Organizing things",
     blurb: "I like pigs. Cats look down on us, dogs look up at us. Pigs, pigs treat us as equal... and I like bacon",
+    position: "Steward",
   },
   {
     name: "Zhi Zheng Ong",
