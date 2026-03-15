@@ -16,7 +16,7 @@ const brothers = [
     class: "2028",
     course: "6-4",
     interests: "edm, badminton, skiing, wang wang crackers",
-    blurb: "what's cookin chat?'",
+    blurb: "let's schedule a coffee chat",
     position: "Webmaster, Scholarship Chair",
   },
   // {
