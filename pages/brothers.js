@@ -26,11 +26,6 @@ const brothers = [
     class: "2029",
   },
   {
-    name: "Anshul Gupta",
-    delta: "1304",
-    class: "2027",
-  },
-  {
     name: "Daniel Kim",
     delta: "1324",
     class: "2029",
