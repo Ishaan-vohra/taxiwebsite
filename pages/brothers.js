@@ -34,6 +34,7 @@ const brothers = [
     name: "Eric Wang",
     delta: "1322",
     class: "2029",
+    position: "Brotherhood Bonding Chair",
   },
   {
     name: "Harry Kim",
@@ -49,6 +50,7 @@ const brothers = [
     name: "Kaile (Felix) Wang",
     delta: "1315",
     class: "2028",
+    position: "Repair Manager",
   },
   {
     name: "Margulan Ismoldayev",
@@ -59,11 +61,13 @@ const brothers = [
     name: "Panagiotis Liampas",
     delta: "1317",
     class: "2028",
+    position: "Social Chair, Membership Educator",
   },
   {
     name: "Peter Lin",
     delta: "1312",
     class: "2027",
+    position: "Risk Manager",
   },
   {
     name: "Soe Thway Ko",
@@ -74,6 +78,7 @@ const brothers = [
     name: "Xin Qi (Frank) Liu",
     delta: "1318",
     class: "2027",
+    position: "House Manager",
   },
   {
     name: "Ishaan Vohra",
@@ -82,7 +87,7 @@ const brothers = [
     course: "6-4",
     interests: "edm, badminton, skiing, wang wang crackers",
     blurb: "let's schedule a coffee chat",
-    position: "Webmaster, Scholarship Chair",
+    position: "Webmaster, Scholarship Chair, Summer House Manager",
   },
   // {
   //   name: "Andy Fong",
@@ -174,7 +179,7 @@ const brothers = [
     class: "2028",
     course: "6-4, 9",
     interests: "Poker, Coding, Skipping Lecture",
-    position: "Secretary",
+    position: "Secretary, Community Service",
   },
   {
     name: "Kingston Lew",
