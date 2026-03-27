@@ -11,6 +11,76 @@ const baksoSapi = localFont({ src: "./BaksoSapi.otf" });
 
 const brothers = [
   {
+    name: "Allen Wu",
+    delta: "1325",
+    class: "2029",
+  },
+  {
+    name: "Anshul Gupta",
+    delta: "1304",
+    class: "2027",
+  },
+  {
+    name: "Brian Xue",
+    delta: "1320",
+    class: "2029",
+  },
+  {
+    name: "Anshul Gupta",
+    delta: "1304",
+    class: "2027",
+  },
+  {
+    name: "Daniel Kim",
+    delta: "1324",
+    class: "2029",
+  },
+  {
+    name: "Eric Wang",
+    delta: "1322",
+    class: "2029",
+  },
+  {
+    name: "Harry Kim",
+    delta: "1323",
+    class: "2029",
+  },
+  {
+    name: "Ishank Agrawal",
+    delta: "1306",
+    class: "2026",
+  },
+  {
+    name: "Kaile (Felix) Wang",
+    delta: "1315",
+    class: "2028",
+  },
+  {
+    name: "Margulan Ismoldayev",
+    delta: "1302",
+    class: "2027",
+  },
+  {
+    name: "Panagiotis Liampas",
+    delta: "1317",
+    class: "2028",
+  },
+  {
+    name: "Peter Lin",
+    delta: "1312",
+    class: "2027",
+  },
+  {
+    name: "Soe Thway Ko",
+    delta: "1326",
+    class: "2029",
+  },
+  {
+    name: "Xin Qi (Frank) Liu",
+    delta: "1318",
+    class: "2027",
+  },
+  {
     name: "Ishaan Vohra",
     delta: "1321",
     class: "2028",
@@ -75,8 +145,8 @@ const brothers = [
     delta: "1297",
     class: "2027",
     course: "18",
-    interests: "Reading, bouldering, chess, puzzle games",
-    blurb: "WUBALUBADUBDUB",
+    interests: "Eating sweets, grinding tft, playing racket sports",
+    blurb: "Muddy water touch fish",
     position: "Vice President",
   }, 
   // {
