@@ -115,6 +115,16 @@ const brothers = [
     position: "Steward",
   },
   {
+    name: "Achyuta Rajaram",
+    delta: "1314",
+    class: "2028",
+  },
+  {
+    name: "Ryan Chin",
+    delta: "1311",
+    class: "2028",
+  },
+  {
     name: "ZZ Ong",
     delta: "1309",
     class: "2028",
