@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Typed from "typed.js";
 import styles from "../styles/Brother.module.css";
-import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 const h2Style = {
   color: "black",
@@ -32,14 +32,7 @@ function House(props) {
 
   return (
     <div>
-      <Link href="/">
-        <span
-          style={{ position: "absolute", zIndex: 1, fontSize: "40px" }}
-          className={styles.Back}
-        >
-          BACK TO HOME
-        </span>
-      </Link>
+      <SiteHeader simple />
       <div style={{ position: "fixed", zIndex: -1 }}>
         <img className={styles.backgroundImage} src="./images/house.jpg" />
         <div className={styles.videoContainer} />

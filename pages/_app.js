@@ -44,37 +44,22 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <div
         style={{
-          width: "100%",
-          textAlign: "center",
-          padding: "8px",
-          backgroundColor: "rgba(0,0,0,0.7)",
-          color: "#ccc",
-          fontFamily: "Alata, sans-serif",
-          fontSize: "12px",
-        }}
-      >
-        Webmaster: Ishaan Vohra,{" "}
-        <a href="mailto:txi-web@mit.edu" style={{ color: "#ccc" }}>
-          txi-web@mit.edu
-        </a>
-      </div>
-      <div
-        style={{
           position: "fixed",
-          padding: "4px",
-          margin: "8px",
+          padding: "6px 10px",
+          margin: "14px",
           bottom: 0,
           right: 0,
-          backgroundColor: "rgba(0,0,0, 0.5)",
-          borderRadius: "4px",
-          color: "#b8b8b8",
-          fontFamily: "sans-serif",
-          fontSize: "14px",
-          textDecoration: "underline",
+          backgroundColor: "rgba(8, 13, 22, 0.72)",
+          border: "1px solid rgba(247, 242, 232, 0.34)",
+          color: "rgba(247, 242, 232, 0.82)",
+          fontFamily: "Alata, sans-serif",
+          fontSize: "11px",
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
         }}
       >
         <a
-          style={{ color: "white", fontFamily: ["Alata", "sans-serif"] }}
+          style={{ color: "inherit", fontFamily: "inherit" }}
           href="https://accessibility.mit.edu/"
         >
           Accessibility

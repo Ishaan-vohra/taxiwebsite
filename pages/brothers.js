@@ -3,6 +3,7 @@ import Typed from "typed.js";
 import Link from "next/link";
 import ProfilePhoto from "../components/ProfilePhoto";
 import BrotherModal from "../components/BrotherModal";
+import SiteHeader from "../components/SiteHeader";
 import styles from "../styles/Brother.module.css";
 
 import localFont from "next/font/local";
@@ -13,6 +14,11 @@ const brothers = [
   {
     name: "Allen Wu",
     delta: "1325",
+    class: "2029",
+  },
+  {
+    name: "Alec Zhang",
+    delta: "1329",
     class: "2029",
   },
   {
@@ -34,18 +40,21 @@ const brothers = [
     name: "Eric Wang",
     delta: "1322",
     class: "2029",
-    position: "Brotherhood Bonding Chair",
   },
   {
     name: "Harry Kim",
     delta: "1323",
     class: "2029",
+    course: "6-4",
+    interests: "Poker, Board games",
+    hometown: "Seoul, Korea",
+    position: "Brotherhood Bonding Chair",
   },
-  {
-    name: "Ishank Agrawal",
-    delta: "1306",
-    class: "2026",
-  },
+  // {
+  //   name: "Ishank Agrawal",
+  //   delta: "1306",
+  //   class: "2026",
+  // },
   {
     name: "Kaile (Felix) Wang",
     delta: "1315",
@@ -56,12 +65,12 @@ const brothers = [
     name: "Margulan Ismoldayev",
     delta: "1302",
     class: "2027",
+    position: "Risk Manager",
   },
   {
     name: "Panagiotis Liampas",
     delta: "1317",
     class: "2028",
-    position: "Social Chair, Membership Educator",
   },
   {
     name: "Peter Lin",
@@ -87,7 +96,7 @@ const brothers = [
     course: "6-4",
     interests: "edm, badminton, skiing, wang wang crackers",
     blurb: "coffee chat?!",
-    position: "Webmaster, Scholarship Chair, Summer House Manager",
+    position: "Vice President",
   },
   // {
   //   name: "Andy Fong",
@@ -103,26 +112,27 @@ const brothers = [
     course: "6-3",
     interests: "Soccer, biking, movies and reading",
     blurb: "My mental health depends on 11 players",
-    position: "Summer Treasurer, Social Chair",
+    position: "Secretary, Community Service",
   },
-  {
-    name: "Powell Zhang",
-    delta: "1282",
-    class: "2026",
-    course: "6-3 + 15-1",
-    interests: "Violin, Piano, Total War, Osu, Organizing things",
-    blurb: "I like pigs. Cats look down on us, dogs look up at us. Pigs, pigs treat us as equal... and I like bacon",
-    position: "Steward",
-  },
-  {
-    name: "Achyuta Rajaram",
-    delta: "1314",
-    class: "2028",
-  },
+  // {
+  //   name: "Powell Zhang",
+  //   delta: "1282",
+  //   class: "2026",
+  //   course: "6-3 + 15-1",
+  //   interests: "Violin, Piano, Total War, Osu, Organizing things",
+  //   blurb: "I like pigs. Cats look down on us, dogs look up at us. Pigs, pigs treat us as equal... and I like bacon",
+  //   position: "Steward",
+  // },
+  // {
+  //   name: "Achyuta Rajaram",
+  //   delta: "1314",
+  //   class: "2028",
+  // },
   {
     name: "Ryan Chin",
     delta: "1311",
     class: "2028",
+    position: "Social Chair, Webmaster",
   },
   {
     name: "ZZ Ong",
@@ -131,7 +141,7 @@ const brothers = [
     course: "8, 6-5",
     interests: "music, making shit, stargazing, touching grass",
     blurb: "i put the zz in rizz",
-    position: "Rush Chair, Lord of Kerns, Publicity Chair",
+    position: "Rush Chair, Lord of Kerns",
   },
   {
     name: "Yibo Cheng",
@@ -157,7 +167,7 @@ const brothers = [
     course: "18",
     interests: "Eating sweets, grinding tft, playing racket sports",
     blurb: "Muddy water touch fish",
-    position: "Vice President",
+    position: "President",
   }, 
   // {
   //   name: "Larry Shi",
@@ -167,13 +177,13 @@ const brothers = [
   //   interests: "DJ mixing, clarinet, poker",
   // },
   {
-    name: "Tony",
+    name: "Tony Wu",
     delta: "1303",
     class: "2027",
     course: "18",
     interests: "Learning cool maths, swimming, cooking",
     blurb: "Rush Theta Xi!",
-    position: "Risk Manager",
+    position: "Steward",
   },
   {
     name: "Michael Huang",
@@ -189,16 +199,15 @@ const brothers = [
     class: "2028",
     course: "6-4, 9",
     interests: "Poker, Coding, Skipping Lecture",
-    position: "Secretary, Community Service",
   },
-  {
-    name: "Kingston Lew",
-    delta: "1291",
-    class: "2026",
-    course: "6-14, 15-2",
-    interests: "hip-hop dance, traveling, street fashion",
-    blurb: "🌞",
-  },
+  // {
+  //   name: "Kingston Lew",
+  //   delta: "1291",
+  //   class: "2026",
+  //   course: "6-14, 15-2",
+  //   interests: "hip-hop dance, traveling, street fashion",
+  //   blurb: "🌞",
+  // },
   {
     name: "Marin Hristov",
     delta: "1308",
@@ -206,9 +215,10 @@ const brothers = [
     course: "18, 6-3",
     interests: "Chess, Puzzles, Table Tennis, Fussball, Poker",
     blurb: "If you show me a bad LaTeX project I won't leave you alone until I've cleaned it up",
+    position: "Scholarship Chair",
   },
   // {
-  //   name: "Franklin",
+  //   name: "Franklin Wang",
   //   delta: "1287",
   //   class: "2026",
   //   course: "6-4",
@@ -287,21 +297,31 @@ const brothers = [
 //     interests: "Exploring weird places, reading blogs, guitaring, and cp ;)",
 //     blurb: ":)",
 //   },,
-{
-    name: "Daniel Xu",
-    delta: "1288",
-    class: "2026",
-    course: "6-14/18",
-    interests: "Philosophy, skipping leg day, Gilbert Strang",
-    blurb: "",
+  {
+    name: "Leon Chen",
+    delta: "1330",
+    class: "2029",
+    course: "8",
+    interests: "Music, good food, nature",
+    blurb: "we've been praying for times like these",
+    hometown: "Singapore",
+    position: "Publicity/Design Chair",
   },
-{
-    name: "Alex Gu",
-    delta: "1284",
-    class: "2026",
-    course: "8, 18",
-    interests: "Physic, Board Games, Piano, Climbing",
-  },
+  // {
+  //   name: "Daniel Xu",
+  //   delta: "1288",
+  //   class: "2026",
+  //   course: "6-14/18",
+  //   interests: "Philosophy, skipping leg day, Gilbert Strang",
+  //   blurb: "",
+  // },
+  // {
+  //   name: "Alex Gu",
+  //   delta: "1284",
+  //   class: "2026",
+  //   course: "8, 18",
+  //   interests: "Physic, Board Games, Piano, Climbing",
+  // },
   // {
   //   name: "Nathan Wang",
   //   delta: "1289",
@@ -317,7 +337,6 @@ const brothers = [
     course: "6-4",
     interests: "Startups, exploiting MIT, sleep",
     blurb: "King Cruft",
-    position: "President",
   },
 ]
   .sort((a, b) => (a.delta > b.delta ? 1 : -1))
@@ -355,14 +374,15 @@ function Brothers(props) {
 
   function renderBrotherImages() {
     // transform to a BrotherImage component
-    let renderedBrothers = brothers.map((brother, index) => {
+    let renderedBrothers = brothers.map((brother) => {
       return (
         <ProfilePhoto
+          key={brother.delta}
           onMouseOver={() => {
             setGlowDelta(brother.delta);
-            scollToRef.current?.scrollIntoView({ behavior: "smooth" });
           }}
           onMouseOut={() => setGlowDelta(null)}
+          delta={brother.delta}
           name={brother.name}
           position={brother.position}
           contact={brother.contact}
@@ -380,9 +400,10 @@ function Brothers(props) {
 
   function renderBrotherNames() {
     // transform to a BrotherName component
-    let renderedBrotherNames = brothers.map((brother, index) => {
+    let renderedBrotherNames = brothers.map((brother) => {
       return (
         <div
+          key={brother.delta}
           className={
             glowDelta === brother.delta
               ? styles.BrotherNameGlow
@@ -410,12 +431,15 @@ function Brothers(props) {
         open={brother != null}
         setClose={() => setBrother({})}
       />
-      <div className={styles.videoContainer}>
-        <Link href="/">
-          <span className={styles.Back}>BACK TO HOME</span>
-        </Link>
+      <div className={`${styles.videoContainer} ${styles.BrothersPage}`}>
+        <SiteHeader simple />
         <div className={styles.BrotherTitle}>
           <span ref={title} />
+        </div>
+        <div className={styles.BrotherPageLinks}>
+          <Link href="/alumni">
+            <span className={baksoSapi.className}>View Alumni</span>
+          </Link>
         </div>
         <div className={styles.BrotherAll}>
           <div className={styles.BrotherNamesContainer}>

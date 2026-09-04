@@ -1,97 +1,48 @@
-import { useState, useEffect, useRef } from "react";
-import Typed from "typed.js";
-import styles from "../styles/Brother.module.css";
-import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
+import styles from "../styles/Contact.module.css";
 
-import localFont from "next/font/local";
-
-const baksoSapi = localFont({ src: "./BaksoSapi.otf" });
-
-const h2Style = {
-  color: "black",
-  textTransform: "none",
-  fontFamily: "sans-serif",
-  fontSize: "24px",
-};
-
-function House(props) {
-  const elTitle = useRef(null);
-  const typedTitle = useRef(null);
-
-  useEffect(() => {
-    const optionsTitle = {
-      strings: [`CONTACT`],
-      typeSpeed: 80,
-      //   backSpeed: 50,
-      //   loop: true,
-      //   loopCount: Infinity,
-      showCursor: true,
-    };
-
-    typedTitle.current = new Typed(elTitle.current, optionsTitle);
-    return () => {
-      typedTitle.current.destroy();
-    };
-  }, []);
-
+export default function Contact() {
   return (
-    <div className={`${styles.videoContainer} ${baksoSapi.className}`}>
-      <Link href="/">
-        <span
-          style={{ position: "absolute", zIndex: 1, fontSize: "40px" }}
-          className={styles.Back}
-        >
-          BACK TO HOME
-        </span>
-      </Link>
-      <img className={styles.backgroundImage} src="./images/house.jpg" />
-      <div className={styles.RushTitle}>
-        <span ref={elTitle} />
-      </div>
-      <div
-        style={{
-          margin: "auto",
-          marginBottom: "40px",
-          left: 0,
-          right: 0,
-          maxWidth: "700px",
-          minHeight: "500px",
-          padding: "40px",
-          backgroundColor: "rgba(255, 255, 255, 0.7)",
-          borderRadius: "10px",
-          textAlign: "center",
-          position: "absolute",
-          fontFamily: "sans-serif",
-          // userSelect: "all",
-        }}
-      >
-        <h1 style={{ color: "black", textTransform: "none" }}>
-          President: Allen Ho
-        </h1>
-        <h2 style={h2Style}>txi-president [at] mit.edu</h2>
-        <br />
-        <h1 style={{ color: "black", textTransform: "none" }}>
-          Secretary: Thomas Liu
-        </h1>
-        <h2 style={h2Style}>txi-secretary [at] mit.edu</h2>
-        <br />
-        <h1 style={{ color: "black", textTransform: "none" }}>
-          Social: Panagiotis Liampas, Juan Pablo Amezcua Gonzalez
-        </h1>
-        <h2 style={h2Style}> txi-social [at] mit.edu</h2>
-        <br />
-        <h1 style={{ color: "black", textTransform: "none" }}>
-          General Officers
-        </h1>
-        <h2 style={h2Style}>txi-officers [at] mit.edu</h2>
-        <br />
-        {/* <h1 style={{ color: "black", textTransform: "none" }}>
-          Summer Housing: Darren Yao
-        </h1>
-        <h2 style={h2Style}> txi-summerhousemanager [at] mit.edu</h2> */}
-      </div>
-    </div>
+    <main className={styles.page}>
+      <SiteHeader simple />
+      <section className={styles.main}>
+        <h1 className={styles.title}>Contact</h1>
+        <p className={styles.intro}>
+          For rush, visits, housing, and chapter questions, reach out to the
+          officer group that fits best.
+        </p>
+
+        <div className={styles.grid}>
+          <article className={styles.card}>
+            <h2>President</h2>
+            <p>Victor Yin</p>
+            <p className={styles.email}>txi-president [at] mit.edu</p>
+          </article>
+
+          <article className={styles.card}>
+            <h2>Secretary</h2>
+            <p>Juan Pablo Amezcua Gonzalez</p>
+            <p className={styles.email}>txi-secretary [at] mit.edu</p>
+          </article>
+
+          <article className={styles.card}>
+            <h2>Social</h2>
+            <p>Ryan Chin</p>
+            <p className={styles.email}>txi-social [at] mit.edu</p>
+          </article>
+
+          <article className={styles.card}>
+            <h2>Officers</h2>
+            <p>General chapter questions</p>
+            <p className={styles.email}>txi-officers [at] mit.edu</p>
+          </article>
+
+          <article className={styles.card}>
+            <h2>Webmaster</h2>
+            <p className={styles.email}>txi-web [at] mit.edu</p>
+          </article>
+        </div>
+      </section>
+    </main>
   );
 }
-
-export default House;

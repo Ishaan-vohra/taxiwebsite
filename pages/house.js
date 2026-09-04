@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Typed from "typed.js";
+import SiteHeader from "../components/SiteHeader";
 import styles from "../styles/Brother.module.css";
 
 function House(props) {
@@ -24,6 +25,7 @@ function House(props) {
 
   return (
     <div className={styles.videoContainer}>
+      <SiteHeader simple />
       <img className={styles.backgroundImage} src="./images/house.jpg" />
       <div className={styles.RushTitle}>
         <span ref={elTitle} />

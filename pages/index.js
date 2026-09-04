@@ -1,108 +1,48 @@
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-import localFont from "next/font/local";
-
-const baksoSapi = localFont({ src: "./BaksoSapi.otf" });
+const menuItems = [
+  { href: "/rush", label: "Rush" },
+  { href: "/brothers", label: "Brothers" },
+  { href: "/alumni", label: "Alumni" },
+  { href: "/summer", label: "Summer Housing" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Home() {
-  // Create reference to store the DOM element containing the animation
-  const title = useRef(null);
-  const header = useRef(null);
-  // Create reference to store the Typed instance itself
-  const typedTitle = useRef(null);
-  const typedHeader = useRef(null);
-
-  useEffect(() => {
-    const optionsTitle = {
-      strings: [`THETA XI`],
-      typeSpeed: 40,
-      backSpeed: 50,
-      showCursor: false,
-    };
-
-    const optionsHeader = {
-      strings: [`Delta Chapter - MIT`],
-      typeSpeed: 40,
-      backSpeed: 50,
-      startDelay: 800,
-      showCursor: false,
-    };
-
-    // elRef refers to the <span> rendered below
-    typedTitle.current = new Typed(title.current, optionsTitle);
-    typedHeader.current = new Typed(header.current, optionsHeader);
-    return () => {
-      // Make sure to destroy Typed instance during cleanup
-      // to prevent memory leaks
-      typedTitle.current.destroy();
-      typedHeader.current.destroy();
-    };
-  }, []);
   return (
-    <div className={`pageContainer ${baksoSapi.className}`}>
-      <div className={styles.videoContainer}>
-        <video autoPlay muted loop id="vaydwalking">
-          <source src="./house.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div></div>
-      <div className={styles.title}>
-        <span ref={title} />
-      </div>
-      <div className={styles.header}>
-        <span ref={header} />
-      </div>
-      <AnimatePresence className="Home-menuItems">
-        <motion.div
-          key={"brothers"}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 1.25, duration: 1.5 }}
-          animate={{ opacity: 1 }}
-          className="Home-menuItem"
-        >
-          <Link href="/brothers">
-            <span className={styles.Link}>BROTHERS</span>
-          </Link>
-        </motion.div>
-        <motion.div
-          key={"summer"}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 1.25, duration: 1.5 }}
-          animate={{ opacity: 1 }}
-          className="Home-menuItem"
-        >
-          <Link href="/summer">
-            <span className={styles.Link}>SUMMER HOUSING</span>
-          </Link>
-        </motion.div>
-        <motion.div
-          key={"rush"}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 1.25, duration: 1.5 }}
-          animate={{ opacity: 1 }}
-          className="Home-menuItem"
-        >
+    <main className={styles.home}>
+      <video className={styles.backgroundVideo} autoPlay muted loop playsInline>
+        <source src="./house.mp4" type="video/mp4" />
+      </video>
+
+      <div className={styles.overlay} />
+
+      <header className={styles.topbar}>
+        <nav className={styles.topnav} aria-label="Primary">
+          {menuItems.map((item) => (
+            <Link key={item.href} href={item.href}>
+              <span className={styles.topnavLink}>{item.label}</span>
+            </Link>
+          ))}
+        </nav>
+      </header>
+
+      <section className={styles.hero}>
+        <img className={styles.crest} src="/images/crest-bw.png" alt="" />
+        <p className={styles.kicker}>MIT Delta Chapter</p>
+        <h1>Theta Xi</h1>
+        <p className={styles.address}>64 Bay State Road, Boston, MA</p>
+
+        <div className={styles.actions}>
           <Link href="/rush">
-            <span className={styles.Link}>RUSH</span>
+            <span className={styles.rushLink}>Rush TAXI</span>
           </Link>
-        </motion.div>
-        <motion.div
-          key={"contact"}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 1.25, duration: 1.5 }}
-          animate={{ opacity: 1 }}
-          className="Home-menuItem"
-        >
-          <Link href="/contact">
-            <span className={styles.Link}>CONTACT</span>
+          <Link href="/brothers">
+            <span className={styles.secondaryLink}>Meet the Brothers</span>
           </Link>
-        </motion.div>
-      </AnimatePresence>
-      <div className="Home-menuItems"></div>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }

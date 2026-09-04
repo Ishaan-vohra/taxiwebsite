@@ -40,12 +40,28 @@ export default function BrotherModal(props) {
                 <span className={styles.BrotherSection}>COURSE: </span>{" "}
                 {brother?.course}
                 <br />
+                {brother?.hometown && (
+                  <>
+                    <span className={styles.BrotherSection}>HOMETOWN: </span>{" "}
+                    {brother?.hometown}
+                    <br />
+                  </>
+                )}
                 <span className={styles.BrotherSection}>INTERESTS: </span>
                 {brother?.interests}
-                <br />
-                <br />
-                {brother?.blurb}
+                {brother?.blurb && (
+                  <blockquote className={styles.BrotherQuote}>
+                    {brother.blurb}
+                  </blockquote>
+                )}
               </div>
+
+              <img
+                className={styles.BrotherCrestModal}
+                src="./images/crest-bw.png"
+                alt=""
+                aria-hidden="true"
+              />
             </div>
           </div>
         </div>
