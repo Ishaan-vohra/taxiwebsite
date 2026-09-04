@@ -19,7 +19,8 @@ const brothers = [
   {
     name: "Alec Zhang",
     delta: "1329",
-    class: "2029",
+    class: "2028",
+    interests: "heytea",
   },
   {
     name: "Anshul Gupta",
